@@ -95,7 +95,7 @@ flag: actf{ok_to_b0r0s-4809813}
 
 reconstruct the jpeg file to gain the flag. After inspect the traffic, you'll find a packet with images, extract the image from the packet.
 
-![](https://i.imgur.com/IIucaLx.png =500x300)
+[](https://i.imgur.com/IIucaLx.png)
 
 
 #### tools & reference
@@ -139,7 +139,7 @@ https://www.youtube.com/watch?v=cauIy20JhFs
 
 Then simply run git cat-file -p to gain the flag
 
-![](https://i.imgur.com/2BIgoJq.jpg =300x400)
+![](https://i.imgur.com/2BIgoJq.jpg)
 
 
 #### reference
