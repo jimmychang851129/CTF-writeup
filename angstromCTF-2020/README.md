@@ -5,6 +5,7 @@
 ### Canary
 
 flag: actf{youre_a_canary_killer_>:(}
+
 string format problem: leak canary with string format then bof
 
 payload:
@@ -27,8 +28,11 @@ r.interactive()
 
 #### Reference
 [format string wiki](https://en.wikipedia.org/wiki/Printf_format_string)
+
 kaibro edu-ctf
+
 [ctf wiki](https://ctf-wiki.github.io/ctf-wiki/pwn/linux/fmtstr/fmtstr_exploit-zh/)
+
 [format string course](https://github.com/qazbnm456/ctf-course/blob/master/slides/w4/format-string.md)
 
 ## Web
