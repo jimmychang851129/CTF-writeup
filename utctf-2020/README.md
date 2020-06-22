@@ -192,3 +192,21 @@ so we could get a lot of mappings, and finally get the flag.
 [binary to ascii](https://www.rapidtables.com/convert/number/binary-to-ascii.html)
 [ceaser cipher](https://cryptii.com/pipes/caesar-cipher)
 [substitution cipher](http://practicalcryptography.com/ciphers/simple-substitution-cipher/)
+
+### One True Problem (Not Solved)
+
+flag: utflag{tw0_tim3_p4ds}
+
+OTP problem + known plaintext attack
+given to string (encrypted with same key, which is the flag)
+
+>213c234c2322282057730b32492e720b35732b2124553d354c22352224237f1826283d7b0651
+
+>3b3b463829225b3632630b542623767f39674431343b353435412223243b7f162028397a103e
+
+**Methods:**
+1. Known plaintext attack: key must start with utctf{
+2. After apply it to decode we can get the plaintext: THE BES
+3. Guess the following plaintext to get the key
+4. plaintext: THE BEST CTF CATEGORY IS CRYPTOGRAPHY!
+
